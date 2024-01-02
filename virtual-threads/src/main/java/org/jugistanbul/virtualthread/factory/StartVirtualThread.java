@@ -9,7 +9,9 @@ import org.jugistanbul.util.ThreadUtil;
 public class StartVirtualThread
 {
     public static void main(String[] args) {
-        var thread = Thread.startVirtualThread(() -> System.out.printf("Hello from Virtual Thread"));
+        var thread = Thread.startVirtualThread(() ->
+         System.out.printf("Hello from Virtual Thread"));
         ThreadUtil.join(thread);
+        System.out.println("Done");
     }
 }
