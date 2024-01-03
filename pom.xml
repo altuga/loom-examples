@@ -10,12 +10,12 @@
     <packaging>pom</packaging>
 
     <name>loom-examples</name>
-    <url>https://github.com/hakdogan/loom-examples.git</url>
+    <url>https://github.com/altuga/loom-examples.git</url>
 
     <developers>
         <developer>
-            <name>Huseyin Akdogan</name>
-            <email>hakdogan75@gmail.com</email>
+            <name>Huseyin Akdogan | Altug Bilgin Altintas</name>
+            <email>hakdogan75@gmail.com | altuga@gmail.com</email>
             <organization>JUG Istanbul</organization>
         </developer>
     </developers>
@@ -23,6 +23,7 @@
         <module>virtual-threads</module>
         <module>util</module>
         <module>structured-concurrency</module>
+        <module>simple-virtual-threads</module>
     </modules>
 
     <properties>
