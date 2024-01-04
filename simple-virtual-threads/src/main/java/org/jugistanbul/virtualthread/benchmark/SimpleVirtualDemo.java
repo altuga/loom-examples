@@ -15,10 +15,11 @@ import java.util.stream.IntStream;
 public class SimpleVirtualDemo {
 
     public static void main(String[] args) throws InterruptedException{
-         Runnable printTask = ()-> System.out.println("Hello Istanbul ...");
+         Runnable printTask = ()-> System.out.println("Hello Istanbul ... ***   ");
          Runnable sleepTask = () -> System.out.println("...slepping ..." );   
         
-         Thread vt = Thread.startVirtualThread(printTask);
+         Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
+         vt.start();
          vt.join();
     }
 
