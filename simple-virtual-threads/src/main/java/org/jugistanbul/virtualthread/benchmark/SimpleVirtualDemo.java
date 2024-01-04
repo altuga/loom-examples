@@ -6,6 +6,7 @@ import org.jugistanbul.util.ThreadUtil;
 import java.time.Instant;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 import java.util.stream.IntStream;
 
 /**
@@ -14,14 +15,27 @@ import java.util.stream.IntStream;
  ***/
 public class SimpleVirtualDemo {
 
-    public static void main(String[] args) throws InterruptedException{
-         Runnable printTask = ()-> System.out.println("Hello Istanbul ... ***   ");
-         Runnable sleepTask = () -> System.out.println("...slepping ..." );   
-        
-         Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
-         vt.start();
-         vt.join();
+    public static void main(String[] args) throws InterruptedException {
+        Runnable printTask = () -> System.out.println("Hello Istanbul ... ***   ");
+        Runnable sleepTask = () -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        };
+
+        // Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
+        // vt.start();
+        // vt.join();
+
+        try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {
+            for (int i = 0; i < 10_00; i++) {
+                executorService.submit(sleepTask);
+            }
+        }
+        ;
+
     }
 
-    
 }
