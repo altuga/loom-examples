@@ -19,7 +19,7 @@ public class SimpleVirtualDemo {
         Runnable printTask = () -> System.out.println("Hello Istanbul ... ***   ");
         Runnable sleepTask = () -> {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
