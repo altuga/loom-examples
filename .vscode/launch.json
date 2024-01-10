@@ -1,0 +1,154 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "SimpleVirtualDemo",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.benchmark.SimpleVirtualDemo",
+            "projectName": "simple-virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "RequestProcessing",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.concurrency.structured.RequestProcessing",
+            "projectName": "structured-concurrency"
+        },
+        {
+            "type": "java",
+            "name": "ShutDownOnFailure",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.concurrency.structured.exchange.ShutDownOnFailure",
+            "projectName": "structured-concurrency"
+        },
+        {
+            "type": "java",
+            "name": "ShutDownOnSuccess",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.concurrency.structured.exchange.ShutDownOnSuccess",
+            "projectName": "structured-concurrency"
+        },
+        {
+            "type": "java",
+            "name": "UnstructuredExample",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.concurrency.unstructure.UnstructuredExample",
+            "projectName": "structured-concurrency"
+        },
+        {
+            "type": "java",
+            "name": "Measurements",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.benchmark.Measurements",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "CpuBounded",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.boundary.CpuBounded",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "Factory",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.builder.Factory",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "Unstarted",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.builder.Unstarted",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "YieldExecution",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.continuation.YieldExecution",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "PlatformThreadPerTask",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.factory.PlatformThreadPerTask",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "StartVirtualThread",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.factory.StartVirtualThread",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "VirtualThreadPerTask",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.factory.VirtualThreadPerTask",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "ThreadJump",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.jump.ThreadJump",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "MonitoringPinningEvent",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.monitor.MonitoringPinningEvent",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "NativeMemoryTracking",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.monitor.NativeMemoryTracking",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "PreventPinning",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.pin.PreventPinning",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "ThreadPinned",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.pin.ThreadPinned",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "ListPlatformThreads",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.pool.ListPlatformThreads",
+            "projectName": "virtual-threads"
+        },
+        {
+            "type": "java",
+            "name": "CooperativeScheduling",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.scheduler.CooperativeScheduling",
+            "projectName": "virtual-threads"
+        }
+    ]
+}
