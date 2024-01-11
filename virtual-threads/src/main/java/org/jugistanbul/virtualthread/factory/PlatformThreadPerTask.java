@@ -16,7 +16,7 @@ public class PlatformThreadPerTask
             IntStream.range(0, 5000)
                     .forEach(i -> {
                         executor.submit(() -> {
-                            Thread.sleep(Duration.ofSeconds(1));
+                            Thread.sleep(Duration.ofSeconds(1).toMillis());
                             return i;
                         });
                     });
