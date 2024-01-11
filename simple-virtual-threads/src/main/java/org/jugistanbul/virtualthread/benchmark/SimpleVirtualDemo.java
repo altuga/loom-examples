@@ -32,9 +32,9 @@ public class SimpleVirtualDemo {
         try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {
             for (int i = 0; i < 10_00; i++) {
                 executorService.submit(printTask);
+                
             }
         }
-        
 
     }
 
