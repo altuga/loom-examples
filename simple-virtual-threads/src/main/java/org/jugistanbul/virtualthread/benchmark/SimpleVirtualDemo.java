@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
 public class SimpleVirtualDemo {
 
     public static void main(String[] args) throws InterruptedException {
-        Runnable printTask = () -> System.out.println("Hello Istanbul ... ***   ");
+        Runnable printTask = () -> System.out.println("Hello Istanbul ");
         Runnable sleepTask = () -> {
             try {
                 Thread.sleep(1500);
