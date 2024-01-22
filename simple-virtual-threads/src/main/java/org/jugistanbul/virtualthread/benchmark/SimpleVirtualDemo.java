@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
 public class SimpleVirtualDemo {
 
     public static void main(String[] args) throws InterruptedException {
-        Runnable printTask = () -> System.out.println("Hello Istanbul ");
+        Runnable printTask = () -> System.out.println("Hello Istanbul *** ");
         Runnable sleepTask = () -> {
             try {
                 Thread.sleep(1500);
@@ -25,16 +25,11 @@ public class SimpleVirtualDemo {
             }
         };
 
-        // Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
-        // vt.start();
-        // vt.join();
+        Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
+        vt.start();
+        vt.join();
 
-        try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {
-            for (int i = 0; i < 10_00; i++) {
-                executorService.submit(printTask);
-                
-            }
-        }
+        
 
     }
 
