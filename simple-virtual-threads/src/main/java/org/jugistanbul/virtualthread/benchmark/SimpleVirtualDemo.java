@@ -17,13 +17,7 @@ public class SimpleVirtualDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Runnable printTask = () -> System.out.println("Hello Istanbul *** ");
-        Runnable sleepTask = () -> {
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        };
+        
 
         Thread vt = Thread.ofVirtual().name("vt").unstarted(printTask);
         vt.start();
