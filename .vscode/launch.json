@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VirtualExecutors",
+            "request": "launch",
+            "mainClass": "org.jugistanbul.virtualthread.benchmark.VirtualExecutors",
+            "projectName": "simple-virtual-threads"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
